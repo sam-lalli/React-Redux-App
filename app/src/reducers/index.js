@@ -4,7 +4,7 @@ const initialState = {
     country: [],
     isLoading: false,
     error: '',
-    region: 'africa'
+    region: 'americas'
 }
 
 export const reducer = (state = initialState, action) => {
