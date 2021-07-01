@@ -4,10 +4,12 @@ import '../app.css';
 //import { updateRegion } from "../actions"
 
 const Header = (props) => {
-  let {region} = props
 
   const handleRegionChange = (e) => {
-    region = (e.target.value)
+    //console.log(props)
+    // props.region = (e.target.value)
+    //props.region = Object.assign({}, props, { region: e.target.value });
+    console.log(e.target.value)
   }
 
   return (
@@ -30,5 +32,11 @@ const Header = (props) => {
   );
 }
 
+const mapStateToProps = state => {
+  return {
+      region: state.region
+  };
+};
 
-export default connect(null, {})(Header);
+
+export default connect(mapStateToProps, {})(Header);
